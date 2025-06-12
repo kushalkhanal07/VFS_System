@@ -1,0 +1,18 @@
+# Root .gitignore
+
+# Backend ignores
+/backend/node_modules/
+/backend/storage/
+
+# Frontend ignores
+/frontend/node_modules/
+frontend/package-lock.json
+/frontend/dist/  # If you have a dist folder in frontend
+
+# General ignores
+.DS_Store
+.env
+*.log
+
+**/*.cmd
+**/*.ps1

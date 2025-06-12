@@ -66,7 +66,6 @@ function DirectoryHeader({
         credentials: "include",
       });
       if (response.ok) {
-        console.log("Logged out successfully");
         setLoggedIn(false);
         setUserName("Guest User");
         setUserEmail("guest@example.com");

@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.7",
+    "01_intro-to-express": "file:..",
     "lucide-react": "^0.511.0",
     "postcss": "^8.5.3",
     "react": "^18.3.1",

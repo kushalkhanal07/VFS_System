@@ -6,11 +6,13 @@ import fileRoutes from "./routes/fileRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import checkAuth from "./middlewares/authMiddleware.js";
 import { connectDB } from "./db.js";
+import path from "path"
 
 try {
   const db = await connectDB();
 
   const app = express();
+  const _dirname=path.resolve()
   app.use(cookieParser());
   app.use(express.json());
   app.use(
@@ -19,6 +21,7 @@ try {
       credentials: true,
     })
   );
+
 
   app.use((req, res, next) => {
     req.db = db;
@@ -33,6 +36,11 @@ try {
     console.log(err);
     res.status(err.status || 500).json({ message: "Something went wrong!!" });
   });
+
+  app.use(express.static(path.join(_dirname,"/frontend/dist")))
+  app.get("*",(_,res)=>{
+    res.sendFile(path.resolve(_dirname,"frontend","dist","index.html"))
+  })
 
   app.listen(4000, () => {
     console.log(`Server Started`);
