@@ -7,6 +7,8 @@ import userRoutes from "./routes/userRoutes.js";
 import checkAuth from "./middlewares/authMiddleware.js";
 import { connectDB } from "./db.js";
 import path from "path"
+import dotenv from 'dotenv';
+dotenv.config();
 
 try {
   const db = await connectDB();
