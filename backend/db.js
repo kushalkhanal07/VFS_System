@@ -1,7 +1,7 @@
 
 import { MongoClient } from "mongodb";
 
-const client = new MongoClient("mongodb+srv://kushal:vqOME84JHPeDd3yU@cluster0.lofq9mq.mongodb.net/storage?retryWrites=true&w=majority&tls=true");
+const client = new MongoClient(process.env.MONGODB_URI || "mongodb+srv://kushal:vqOME84JHPeDd3yU@cluster0.lofq9mq.mongodb.net/storage?retryWrites=true&w=majority&tls=true");
 
 export async function connectDB() {
   await client.connect();
