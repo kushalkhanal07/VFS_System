@@ -1,0 +1,108 @@
+.directory-list {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.directory-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.directory-list th,
+.directory-list td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.directory-list th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.directory-list .item-name {
+  display: flex;
+  align-items: center;
+}
+
+.directory-list .icon {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.directory-list .icon-folder::before {
+  content: "📁";
+}
+
+.directory-list .icon-pdf::before {
+  content: "📄";
+}
+
+.directory-list .icon-image::before {
+  content: "🖼️";
+}
+
+.directory-list .icon-video::before {
+  content: "🎥";
+}
+
+.directory-list .icon-archive::before {
+  content: "📦";
+}
+
+.directory-list .icon-code::before {
+  content: "💻";
+}
+
+.directory-list .icon-alt::before {
+  content: "📝";
+}
+
+.directory-list .actions {
+  display: flex;
+  gap: 5px;
+}
+
+.directory-list .action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #007bff;
+  font-size: 16px;
+}
+
+.directory-list .action-btn:hover {
+  color: #0056b3;
+}
+
+.directory-list .cancel-upload-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 2px 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.directory-list .cancel-upload-btn:hover {
+  background-color: #c82333;
+}
+
+.directory-list .context-menu {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  min-width: 150px;
+}
+
+.directory-list .context-menu-item {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.directory-list .context-menu-item:hover {
+  background-color: #f0f0f0;
+}
